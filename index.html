@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krish Chudasama – Computer Vision Engineer</title>
+<meta name="description" content="Computer Vision Engineer building real-time video analytics with YOLO, TensorRT and NVIDIA DeepStream.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2224%22 fill=%22%232f6bff%22/><text x=%2250%22 y=%2268%22 font-size=%2258%22 font-family=%22sans-serif%22 font-weight=%22800%22 fill=%22white%22 text-anchor=%22middle%22>K</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#f4f7fe;--ink:#0b1b3a;--muted:#5a6b8a;--line:#e2e9f7;--blue:#2f6bff;--deep:#1a3fb8;--tint:#e8efff;--f:"Manrope","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.03rem/1.7 var(--f);-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+a:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:64px;gap:16px}
+.logo{font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.top nav{display:flex;gap:26px}
+.top nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.93rem}
+.top nav a:hover{color:var(--blue)}
+@media(max-width:700px){.top nav{gap:14px}.top nav a{font-size:.85rem}}
+@media(max-width:520px){.top nav a:nth-child(n+4){display:none}}
+
+.hero{padding:70px 0 80px}
+.scene{perspective:900px;display:inline-block;margin-bottom:26px}
+h1{--rx:0deg;--ry:0deg;margin:0;font-weight:800;font-size:clamp(3rem,10vw,7.4rem);line-height:.98;letter-spacing:-.045em;color:#4a82ff;transform-style:preserve-3d;transform:rotateY(var(--rx)) rotateX(var(--ry));transition:transform .2s ease-out;text-shadow:1px 1px 0 #3f77f5,2px 2px 0 #376fe8,3px 3px 0 #3066dc,4px 4px 0 #295dd0,5px 5px 0 #2354c4,6px 6px 0 #1e4cb8,7px 7px 0 #1a44ab,8px 8px 0 #163c9e,9px 9px 0 #123492,10px 10px 18px rgba(11,27,58,.28),16px 22px 40px rgba(26,63,184,.35);animation:enter 1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes enter{from{opacity:0;transform:rotateX(70deg) translateY(30px)}}
+.role{font-weight:700;font-size:1.25rem;color:var(--blue);margin:0 0 14px}
+.lead{max-width:50ch;color:var(--muted);margin:0 0 30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:12px;font-weight:700;font-size:.97rem;text-decoration:none;border:1.5px solid var(--blue);transition:transform .2s,box-shadow .2s}
+.btn.fill{background:linear-gradient(180deg,#4a82ff,var(--blue));color:#fff;box-shadow:0 8px 20px -8px rgba(47,107,255,.7)}
+.btn.line{color:var(--blue);background:#fff}
+.btn:hover{transform:translateY(-2px)}
+.stats{display:flex;gap:36px;flex-wrap:wrap;margin:44px 0 0;padding:0;list-style:none}
+.stats b{display:block;font-size:1.7rem;font-weight:800;letter-spacing:-.03em}
+.stats span{color:var(--muted);font-size:.9rem}
+
+
+section{padding:70px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,3.6vw,2.2rem);font-weight:800;letter-spacing:-.03em;margin:0 0 34px}
+h3{font-size:1.15rem;font-weight:700;letter-spacing:-.01em;margin:0}
+.muted{color:var(--muted)}
+.row{display:grid;grid-template-columns:200px 1fr;gap:30px;margin-bottom:46px}
+.row .when{color:var(--muted);font-size:.92rem;font-weight:600;padding-top:4px}
+.pts{padding-left:1.1rem;margin:12px 0 0}
+.pts li{margin-bottom:9px;max-width:68ch}
+@media(max-width:700px){.row{grid-template-columns:1fr;gap:6px}}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;perspective:1200px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;box-shadow:0 18px 40px -24px rgba(26,63,184,.35);transition:transform .15s ease-out,box-shadow .2s;transform-style:preserve-3d;will-change:transform}
+.card:hover{box-shadow:0 28px 50px -22px rgba(26,63,184,.5)}
+.card p{color:var(--muted);margin:10px 0 16px;font-size:.97rem;flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:7px;padding:0;margin:0 0 18px;list-style:none}
+.chips li{background:var(--tint);color:var(--deep);border-radius:999px;padding:3px 11px;font-size:.8rem;font-weight:600}
+.gh{font-weight:700;text-decoration:none;font-size:.95rem}
+.gh:hover{text-decoration:underline}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.sk{background:var(--soft);border-radius:16px;padding:22px}
+.sk h3{font-size:1rem;margin-bottom:6px;color:var(--deep)}
+.sk p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.6}
+
+.certs{columns:2 260px;column-gap:30px;padding-left:1.1rem;margin:14px 0 0}
+.certs li{margin-bottom:5px;break-inside:avoid}
+.contact{background:linear-gradient(160deg,#f4f7fe,#e8efff);border-radius:24px;padding:54px 40px;text-align:left}
+.contact p{max-width:54ch;color:var(--muted);margin:0 0 26px}
+.sect-contact{border:0;padding-top:30px}
+footer{padding:34px 0 50px;color:var(--muted);font-size:.9rem;text-align:center}
+@media(prefers-reduced-motion:reduce){h1{animation:none;transition:none}.card,.btn{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">Krish Chudasama</a>
+    <nav aria-label="Main">
+      <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+  <div class="hero">
+    <div class="scene" id="scene"><h1 id="name">Krish<br>Chudasama</h1></div>
+    <p class="role">Computer Vision Engineer</p>
+    <p class="lead">I turn camera streams into reliable real-time analytics: training models, optimising them with TensorRT and deploying them on NVIDIA DeepStream.</p>
+    <div class="cta">
+      <a class="btn fill" href="mailto:krishchudasama05@gmail.com">Email me</a>
+      <a class="btn line" href="https://linkedin.com/in/krish-chudasama" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn line" href="https://github.com/krish-chudasama" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <ul class="stats">
+      <li><b>70–80</b><span>models trained</span></li>
+      <li><b>40–50</b><span>models deployed</span></li>
+      <li><b>50,000+</b><span>samples processed</span></li>
+    </ul>
+  </div>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="row">
+      <div class="when">March 2025 – Present</div>
+      <div>
+        <h3>Computer Vision Engineer</h3>
+        <div class="muted">Kalydo AI</div>
+        <ul class="pts">
+          <li>Built end-to-end workflows for industrial AI: RTSP streams, recording, frame extraction and dataset cleaning with Python and OpenCV.</li>
+          <li>Trained and fine-tuned 70–80 models across detection, classification, segmentation, NLP and pose/activity recognition; helped deploy 40–50.</li>
+          <li>Developed real-time pipelines on NVIDIA DeepStream 8.0 and PyServiceMaker; converted PyTorch models to ONNX and TensorRT (FP32, FP16, INT8) and shipped them with Docker.</li>
+          <li>Delivered an ANPR system (vehicle and plate detection, OCR, tracking, database). Fine-tuning YOLO11n on domain data lifted reported performance from about 85% to 95–97%.</li>
+          <li>Implemented vehicle speed estimation with camera calibration and homography, age and gender analytics, and GRU-based activity recognition from YOLO pose keypoints.</li>
+          <li>Integrated analytics events with PostgreSQL and Redis, and debugged latency, memory, dropped frames and GPU utilisation.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="when">June – July 2023</div>
+      <div>
+        <h3>Data Analytics Job Simulation</h3>
+        <div class="muted">Deloitte</div>
+        <ul class="pts">
+          <li>Analysed 10,000+ compensation records in Python and Excel to find gender-based pay gaps, and built Power BI dashboards for KPI trends.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>NEXUS AI</h3>
+        <p>RAG, agentic AI and MCP platform with document ingestion, hybrid retrieval and reranking, citations, abstention detection and a tool-calling agent.</p>
+        <ul class="chips"><li>Python</li><li>FastAPI</li><li>ChromaDB</li><li>MCP</li><li>Docker</li></ul>
+        <a class="gh" href="https://github.com/krish-chudasama" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+      <article class="card">
+        <h3>Object Detection and Model Evaluation Platform</h3>
+        <p>Upload custom models, run image and video inference, switch models live and compare detection results side by side.</p>
+        <ul class="chips"><li>YOLO</li><li>FastAPI</li><li>OpenCV</li><li>React</li></ul>
+        <a class="gh" href="https://github.com/krish-chudasama" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+      <article class="card">
+        <h3>AI-Powered Document Analytics</h3>
+        <p>End-to-end pipeline for OCR, entity recognition, sentiment, keyword extraction, semantic search and clustering, with dashboards.</p>
+        <ul class="chips"><li>OCR</li><li>BERT</li><li>spaCy</li><li>Streamlit</li><li>Power BI</li></ul>
+        <a class="gh" href="https://github.com/krish-chudasama" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+      <article class="card">
+        <h3>Diet Planner</h3>
+        <p>A diet-planning application built around a KNN recommendation model.</p>
+        <ul class="chips"><li>Python</li><li>Scikit-learn</li><li>Pandas</li></ul>
+        <a class="gh" href="https://github.com/krish-chudasama" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="sk"><h3>Computer vision</h3><p>YOLO, OpenCV, detection, classification, segmentation, pose estimation, OCR, tracking</p></div>
+      <div class="sk"><h3>Video AI</h3><p>NVIDIA DeepStream 8.0, PyServiceMaker, GStreamer, TensorRT, ONNX, RTSP</p></div>
+      <div class="sk"><h3>Machine learning</h3><p>PyTorch, CNN, GRU, NLP, KNN, training, fine-tuning, evaluation</p></div>
+      <div class="sk"><h3>Deployment</h3><p>Docker, Linux, FP32, FP16, INT8</p></div>
+      <div class="sk"><h3>Backend and data</h3><p>FastAPI, PostgreSQL, Redis, GraphQL, SQL, NoSQL, ChromaDB</p></div>
+      <div class="sk"><h3>Languages and tools</h3><p>Python, SQL, C++, Git, GitHub, Streamlit</p></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="row" style="margin-bottom:10px">
+      <div class="when">2023 – 2026</div>
+      <div>
+        <h3>B.Sc. Data Science</h3>
+        <div class="muted">Marwadi University, Rajkot, Gujarat · CGPA 9.11/10</div>
+        <ul class="certs">
+          <li>GenAI Buildthon – OpenAI x NxtWave</li><li>Python Essentials – Cisco</li><li>Python for Data Science – NPTEL</li><li>Introduction to Machine Learning – NPTEL</li><li>Big Data – Springboard</li><li>Tableau Workshop – NPTEL</li><li>Introduction to NoSQL Databases – Springboard</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="sect-contact">
+    <div class="contact">
+      <h2 style="margin-bottom:12px">Let’s build something</h2>
+      <p>I’m open to computer vision and video analytics roles, and to projects that need models running reliably in the real world. Based in Rajkot, India.</p>
+      <div class="cta">
+        <a class="btn fill" href="mailto:krishchudasama05@gmail.com">krishchudasama05@gmail.com</a>
+        <a class="btn line" href="https://linkedin.com/in/krish-chudasama" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn line" href="https://github.com/krish-chudasama" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn line" href="Krish_Chudasama.pdf">Résumé</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>© <span id="yr">2026</span> Krish Chudasama</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var nm=document.getElementById('name'),hero=document.querySelector('.hero');
+  hero.addEventListener('mousemove',function(e){
+    var r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    nm.style.setProperty('--rx',(x*22)+'deg');nm.style.setProperty('--ry',(-y*16)+'deg');
+  });
+  hero.addEventListener('mouseleave',function(){nm.style.setProperty('--rx','0deg');nm.style.setProperty('--ry','0deg')});
+  document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('mousemove',function(e){
+      var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      c.style.transform='rotateY('+(x*7)+'deg) rotateX('+(-y*7)+'deg) translateZ(0)';
+    });
+    c.addEventListener('mouseleave',function(){c.style.transform=''});
+  });
+})();
+</script>
+</body>
+</html>
